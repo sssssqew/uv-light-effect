@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Orbitron", sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-image: linear-gradient(to bottom, transparent 96%, #9370db 96%), linear-gradient(to right, #1e0033 96%, #9370db 96%);
+    background-size: 50px 50px, 50px 50px;
+}
+.underlay{
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(
+        200px 500px at var(--x) 50%, 
+        transparent 0.1%, 
+        #1e0033
+    );
+}
+.overlay{
+    position: fixed;
+    z-index: 10;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, transparent 96%, #9370db 96%), linear-gradient(to right, #1e0033 96%, #9370db 96%);
+    background-size: 50px 50px, 50px 50px;
+    opacity: 0.1;
+}
+h1{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    color: #91feff;
+    font-size: 5rem;
+}
+.uv-light{
+    position: absolute;
+    top: 5%;
+    left: 100px;
+    width: 30px;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 50px;
+    animation: blink 3s infinite;
+}
+
+@keyframes blink {
+    0%{
+        box-shadow: 0 0 30px #fff, 0 0 0px #fff, 0 0 10px #fff, 0 0 30px #85b6ff,
+        0 0 10px #85b6ff, 0 0 10px #85b6ff;
+    }
+    50%{
+        box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #85b6ff,
+        0 0 30px #85b6ff, 0 0 80px #85b6ff;
+    }
+    100%{
+        box-shadow: 0 0 30px #fff, 0 0 0px #fff, 0 0 10px #fff, 0 0 30px #85b6ff,
+        0 0 10px #85b6ff, 0 0 10px #85b6ff;
+    }
+}
+
+
+
+
+
